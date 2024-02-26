@@ -5,7 +5,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 local Window = Fluent:CreateWindow({
     Title = "Kuroko Hub X Uranium | Blox Fruits",
     SubTitle = "by Đạt Bot Mods",
-    TabWidth = 150,
+    TabWidth = 170,
     Size = UDim2.fromOffset(470, 330),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
     Theme = "Synapse",
@@ -3380,11 +3380,11 @@ spawn(function()
 
 
     if First_Sea then
-		tableBoss = {"The Gorilla King","Bobby","Yeti","Mob Leader","Vice Admiral","Warden","Chief Warden","Swan","Magma Admiral","Fishman Lord","Wysper","Thunder God","Cyborg","Saber Expert"}
+		tableBoss = {"Select","The Gorilla King","Bobby","Yeti","Mob Leader","Vice Admiral","Warden","Chief Warden","Swan","Magma Admiral","Fishman Lord","Wysper","Thunder God","Cyborg","Saber Expert"}
 	elseif Second_Sea then
-		tableBoss = {"Diamond","Jeremy","Fajita","Don Swan","Smoke Admiral","Cursed Captain","Darkbeard","Order","Awakened Ice Admiral","Tide Keeper"}
+		tableBoss = {"Select","Diamond","Jeremy","Fajita","Don Swan","Smoke Admiral","Cursed Captain","Darkbeard","Order","Awakened Ice Admiral","Tide Keeper"}
 	elseif Third_Sea then
-		tableBoss = {"Stone","Island Empress","Kilo Admiral","Captain Elephant","Beautiful Pirate","rip_indra True Form","Longma","Soul Reaper","Cake Queen"}
+		tableBoss = {"Select","Stone","Island Empress","Kilo Admiral","Captain Elephant","Beautiful Pirate","rip_indra True Form","Longma","Soul Reaper","Cake Queen"}
 	end
 
 
@@ -3884,7 +3884,7 @@ ToggleSeaBeAst:OnChanged(function(Value)
     end)
     
     
-    
+    elseif Third_Sea then
      Tabs.Main:AddParagraph({
         Title = "Elite Hunter",
         Content = "Auto find and kill boss elite"
@@ -3961,7 +3961,7 @@ ToggleSeaBeAst:OnChanged(function(Value)
     end
 
 
-
+elseif Third_Sea then
  Tabs.Main:AddParagraph({
     Title = "Mirage Island",
     Content = "Auto Summon Mystic Island"
