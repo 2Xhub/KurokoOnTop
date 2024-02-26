@@ -2625,14 +2625,14 @@ local posZ = 15
         Content = "Auto farm your mastery"
     })
 
-    local DropdownMastery = Tabs.Main:AddDropdown("SelectMastery", {
+    local DropdownMastery = Tabs.Main:AddDropdown("DropdownMastery", {
         Title = "Farm Mode",
         Values = {"Level","Near Mobs",},
         Multi = false,
         Default = 1,
     })
 
-    SelectMastery:SetValue("Mob Farm")
+    DropdownMastery:SetValue("Mob Farm")
 
     DropdownMastery:OnChanged(function(Value)
         TypeMastery = Value
@@ -3388,7 +3388,7 @@ spawn(function()
 	end
 
 
-    local DropdownBoss = Tabs.Main:AddDropdown("SelectBoss", {
+    local DropdownBoss = Tabs.Main:AddDropdown("DropdownBoss", {
         Title = "Select",
         Values = tableBoss,
         Multi = false,
@@ -3496,7 +3496,7 @@ spawn(function()
         }
         end
 
-    local DropdownMaterial = Tabs.Main:AddDropdown("SelectMaterial", {
+    local DropdownMaterial = Tabs.Main:AddDropdown("DropdownMaterial", {
         Title = "Select",
         Values = MaterialList,
         Multi = false,
@@ -3506,7 +3506,7 @@ spawn(function()
     DropdownMaterial:SetValue("Conjured Cocoa")
 
     DropdownMaterial:OnChanged(function(Value)
-        SelectMaterial = Value
+        DropdownMaterial = Value
     end)
 
 
@@ -4689,7 +4689,7 @@ for i,v in pairs(game:GetService("Players"):GetChildren()) do
     table.insert(Playerslist,v.Name)
 end
 
-local SelectedPly = Tabs.Player:AddDropdown("SelectedPly", {
+local SelectedPly = Tabs.Player:AddDropdown("DropdownedPly", {
     Title = "Select",
     Values = Playerslist,
     Multi = false,
@@ -4703,7 +4703,7 @@ end)
 
     
 Tabs.Player:AddButton({
-    Title = "Refresh Select",
+    Title = "Refresh Dropdown",
     Description = "Refresh player list",
     Callback = function()
         Playerslist = {}
@@ -4843,7 +4843,7 @@ elseif Third_Sea then
        }
     end
 
-local DropdownIsland = Tabs.Teleport:AddDropdown("SelectIsland",{
+local DropdownIsland = Tabs.Teleport:AddDropdown("DropdownIsland",{
     Title = "Select",
     Values = IslandList,
     Multi = false,
@@ -4983,7 +4983,7 @@ end
 
 _G.SelectFruit = ""
 
-local DropdownFruit = Tabs.Fruit:AddDropdown("SelectFruit", {
+local DropdownFruit = Tabs.Fruit:AddDropdown("DropdownFruit", {
     Title = "Select",
     Values = Table_DevilFruitSniper,
     Multi = false,
@@ -5251,7 +5251,7 @@ end)
 
 local Chips = {"Flame","Ice","Quake","Light","Dark","Spider","Rumble","Magma","Buddha","Sand","Phoenix","Dough"}
 
-local DropdownRaid = Tabs.Raid:AddDropdown("SelectRaid", {
+local DropdownRaid = Tabs.Raid:AddDropdown("DropdownRaid", {
     Title = "Select",
     Values = Chips,
     Multi = false,
