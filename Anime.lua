@@ -4038,7 +4038,7 @@ end)
 
      Tabs.Main:AddParagraph({
         Title = "Items",
-        Content = "Auto get items"
+        Content = "Get items"
     })
 
 
@@ -4323,7 +4323,7 @@ end)
 
 
 
-_G.FastAttackDelay = 0.15
+_G.FastAttackDelay = 0.05
 
     local Client = game.Players.LocalPlayer
     local STOP = require(Client.PlayerScripts.CombatFramework.Particle)
@@ -4456,7 +4456,7 @@ CamShake:Stop()
       if isnetworkowner then
       return isnetworkowner(object)
       else
-        if (object.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 300 then
+        if (object.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 350 then
       return true
       end
       return false
@@ -4465,11 +4465,11 @@ CamShake:Stop()
 
 
 
-    local ToggleBypassTP = Tabs.Setting:AddToggle("ToggleBypassTP", {Title = "Bypass Tp", Default = true })
+    local ToggleBypassTP = Tabs.Setting:AddToggle("ToggleBypassTP", {Title = "Bypass Tp [ Beta ]", Default = true })
     ToggleBypassTP:OnChanged(function(Value)
         BypassTP = Value
     end)
-    Options.ToggleBypassTP:SetValue(false)
+    Options.ToggleBypassTP:SetValue(true)
 end
 
 
@@ -4577,7 +4577,7 @@ spawn(function()
             local args = {
                 [1] = "AddPoint",
                 [2] = "Demon Fruit",
-                [3] = 3
+                [3] = 100
             }
                         
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
@@ -4591,7 +4591,7 @@ spawn(function()
             local args = {
                 [1] = "AddPoint",
                 [2] = "Gun",
-                [3] = 3
+                [3] = 100
             }
                         
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
@@ -4606,7 +4606,7 @@ spawn(function()
             local args = {
                 [1] = "AddPoint",
                 [2] = "Sword",
-                [3] = 3
+                [3] = 100
             }
                         
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
@@ -4620,7 +4620,7 @@ spawn(function()
             local args = {
                 [1] = "AddPoint",
                 [2] = "Defense",
-                [3] = 3
+                [3] = 100
             }
                         
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
@@ -4635,7 +4635,7 @@ spawn(function()
             local args = {
                 [1] = "AddPoint",
                 [2] = "Melee",
-                [3] = 3
+                [3] = 100
             }
                         
             game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
@@ -4975,11 +4975,11 @@ spawn(function()
 end)
 
 
-local ToggleStore = Tabs.Fruit:AddToggle("ToggleStore", {Title = "Store Fruit", Default = false })
+local ToggleStore = Tabs.Fruit:AddToggle("ToggleStore", {Title = "Store Fruit", Default = true })
 ToggleStore:OnChanged(function(Value)
     _G.AutoStoreFruit = Value
 end)
-Options.ToggleStore:SetValue(false)
+Options.ToggleStore:SetValue(true)
 
 spawn(function()
     while task.wait() do
