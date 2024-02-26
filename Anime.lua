@@ -2377,9 +2377,9 @@ end
 coroutine.wrap(YTZCAJC_fake_script)()
 --------------------------------------------------------------------------------------------------------------------------------------------
 -- Hehe
-local posX = 30
+local posX = 15
 local posY = 30
-local posZ = 30
+local posZ = 15
 --------------------------------------------------------------------------------------------------------------------------------------------
 --Create Tabs
     Tabs.Main:AddParagraph({
@@ -2625,14 +2625,14 @@ local posZ = 30
         Content = "Auto farm your mastery"
     })
 
-    local DropdownMastery = Tabs.Main:AddDropdown("DropdownMastery", {
+    local DropdownMastery = Tabs.Main:AddDropdown("SelectMastery", {
         Title = "Farm Mode",
         Values = {"Level","Near Mobs",},
         Multi = false,
         Default = 1,
     })
 
-    DropdownMastery:SetValue("Level")
+    SelectMastery:SetValue("Mob Farm")
 
     DropdownMastery:OnChanged(function(Value)
         TypeMastery = Value
@@ -3388,8 +3388,8 @@ spawn(function()
 	end
 
 
-    local DropdownBoss = Tabs.Main:AddDropdown("DropdownBoss", {
-        Title = "Dropdown",
+    local DropdownBoss = Tabs.Main:AddDropdown("SelectBoss", {
+        Title = "Select",
         Values = tableBoss,
         Multi = false,
         Default = 1,
@@ -3496,8 +3496,8 @@ spawn(function()
         }
         end
 
-    local DropdownMaterial = Tabs.Main:AddDropdown("DropdownMaterial", {
-        Title = "Dropdown",
+    local DropdownMaterial = Tabs.Main:AddDropdown("SelectMaterial", {
+        Title = "Select",
         Values = MaterialList,
         Multi = false,
         Default = 1,
@@ -4690,7 +4690,7 @@ for i,v in pairs(game:GetService("Players"):GetChildren()) do
 end
 
 local SelectedPly = Tabs.Player:AddDropdown("SelectedPly", {
-    Title = "Dropdown",
+    Title = "Select",
     Values = Playerslist,
     Multi = false,
     Default = 1,
@@ -4703,7 +4703,7 @@ end)
 
     
 Tabs.Player:AddButton({
-    Title = "Refresh Dropdown",
+    Title = "Refresh Select",
     Description = "Refresh player list",
     Callback = function()
         Playerslist = {}
@@ -4843,8 +4843,8 @@ elseif Third_Sea then
        }
     end
 
-local DropdownIsland = Tabs.Teleport:AddDropdown("DropdownIsland",{
-    Title = "Dropdown",
+local DropdownIsland = Tabs.Teleport:AddDropdown("SelectIsland",{
+    Title = "Select",
     Values = IslandList,
     Multi = false,
     Default = 1,
@@ -4983,8 +4983,8 @@ end
 
 _G.SelectFruit = ""
 
-local DropdownFruit = Tabs.Fruit:AddDropdown("DropdownFruit", {
-    Title = "Dropdown",
+local DropdownFruit = Tabs.Fruit:AddDropdown("SelectFruit", {
+    Title = "Select",
     Values = Table_DevilFruitSniper,
     Multi = false,
     Default = 1,
@@ -5251,8 +5251,8 @@ end)
 
 local Chips = {"Flame","Ice","Quake","Light","Dark","Spider","Rumble","Magma","Buddha","Sand","Phoenix","Dough"}
 
-local DropdownRaid = Tabs.Raid:AddDropdown("DropdownRaid", {
-    Title = "Dropdown",
+local DropdownRaid = Tabs.Raid:AddDropdown("SelectRaid", {
+    Title = "Select",
     Values = Chips,
     Multi = false,
     Default = 1,
