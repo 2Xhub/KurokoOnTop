@@ -2776,7 +2776,7 @@ M:AddParagraph("Select Weapon","Please Select Weapon")
 local WeaponList = {"Melee","Sword","Fruit","Gun"}
 _G.SelectWeapon = "Melee"
 M:AddDropdown({
-    Name = "Chọn vũ khí",
+    Name = "Select",
     Default = "",
     Options = WeaponList,
     Flag = "Select Weapon",
@@ -2831,7 +2831,7 @@ if World2 and World1 then
     })
 
     M:AddButton({
-        Name = "Tăng FPS",
+        Name = "Boots FPS",
         Callback = function()
             pcall(function()
                 game:GetService("Lighting").FantasySky:Destroy()
@@ -3826,7 +3826,7 @@ end
 
 
 M:AddDropdown({
-    Name = "Chọn Boss",
+    Name = "Select Boss",
     Default = "",
     Options = tableBoss,
     Flag = "Select Boss",
@@ -3839,7 +3839,7 @@ M:AddDropdown({
 
 
 M:AddToggle({
-    Name = "Đánh Boss",
+    Name = "Kill Boss",
     Default = false,
     Flag = "Tự động Farm Boss",
     Save = true,
@@ -3883,7 +3883,7 @@ end)
 
 
 M:AddToggle({
-    Name = "Đánh hết Boss",
+    Name = "Kill All Boss",
     Default = false,
     Flag = "Tự động Farm All Boss",
     Save = true,
@@ -3928,7 +3928,7 @@ end)
     })
 
     M:AddToggle({
-        Name = "Cày Điểm Haki Quan Sát",
+        Name = "Farm Ken V2",
         Default = false,
         Flag = "Tự động Farm Observation Haki",
         Save = true,
@@ -3939,7 +3939,7 @@ end)
     })
     
     M:AddToggle({
-        Name = "Cày Điểm Haki Quan Sát Đổi Sv",
+        Name = "Farm Ken V2 Hop Sever",
         Default = false,
         Flag = "Tự động Farm Observation Haki[HOP]",
         Save = true,
@@ -3953,7 +3953,7 @@ end)
     })
     
     M:AddToggle({
-        Name = "Tự động Death Step",
+        Name = "Aotu Death Step",
         Default = false,
         Flag = "Tự động Death Step",
         Save = true,
@@ -3963,7 +3963,7 @@ end)
     })
 
     M:AddToggle({
-        Name = "Tự động SharkMan Karate",
+        Name = "Aotu SharkMan Karate",
         Default = false,
         Flag = "Tự động SharkMan",
         Save = true,
@@ -3974,7 +3974,7 @@ end)
     })
 
  M:AddToggle({
-        Name = "Tự động Electric Claw",
+        Name = "Aotu Electric Claw",
         Default = false,
         Flag = "Tự động Electric Claw",
         Save = true,
@@ -3985,7 +3985,7 @@ end)
     })
 
     M:AddToggle({
-        Name = "Tự động Dragon Talon",
+        Name = "Aotu Dragon Talon",
         Default = false,
         Flag = "Tự động Dragon Talon",
         Save = true,
@@ -3995,7 +3995,7 @@ end)
     })
 
     M:AddToggle({
-        Name = "Tự động GodHuman",
+        Name = "Aotu GodHuman",
         Default = false,
         Flag = "Tự động GodHuman",
         Save = true,
@@ -4005,7 +4005,7 @@ end)
     })
 
     ST:AddToggle({
-        Name = "Tự động Haki",
+        Name = "Aotu Buso",
         Default = true,
         Callback = function(Value)
             _G.AUTOHAKI = Value
@@ -4025,7 +4025,7 @@ end)
     end)
 
     ST:AddToggle({
-        Name = "Tránh văng",
+        Name = "Anti Afk",
         Default = true,
         Callback = function(Value)
             local vu = game:GetService("VirtualUser")
@@ -4040,7 +4040,7 @@ end)
     })
 
     ST:AddToggle({
-        Name = "Màn hình treo",
+        Name = "White Screen",
         Default = false,
         Flag = "White screen",
         Save = true,
@@ -4100,7 +4100,7 @@ spawn(function()
 end)
 
 IQ:AddToggle({
-    Name = "Tự động Saber",
+    Name = "Aotu Saber",
     Default = false,
     Flag = "Tự động Saber",
     Save = true,
@@ -4112,7 +4112,7 @@ IQ:AddToggle({
 
 
 IQ:AddToggle({
-    Name = "Tự động Saber[HOP]",
+    Name = "Aotu Saber[HOP]",
     Default = false,
     Flag = "Tự động Saber[HOP]",
     Save = true,
@@ -4139,7 +4139,7 @@ spawn(function()
 end)
 
 TogglePolev1 = IQ:AddToggle({
-    Name = "Tự động Pole V.1",
+    Name = "Aotu Pole V.1",
     Default = false,
     Flag = "Tự động Pole",
     Save = true,
@@ -4150,7 +4150,7 @@ TogglePolev1 = IQ:AddToggle({
 })
 
 TogglePolev1Hop = IQ:AddToggle({
-    Name = "Tự động Pole V.1[HOP]",
+    Name = "Aotu Pole V.1[HOP]",
     Default = false,
     Flag = "Tự động Pole[HOP]",
     Save = true,
@@ -4164,7 +4164,7 @@ local Section = IQ:AddSection({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Second Sea",
+    Name = "Aotu Second Sea",
     Default = false,
     Flag = "Tự động Second",
     Save = true,
@@ -4178,7 +4178,7 @@ local Section = IQ:AddSection({
     Name = "Vampire"
 })
 IQ:AddToggle({
-    Name = "Tự động Vampire",
+    Name = "Aotu Vampire",
     Default = false,
     Flag = "Tự động Vampire",
     Save = true,
@@ -4194,7 +4194,7 @@ local Section = IQ:AddSection({
 })
 
 IQ:AddToggle({
-    Name = "Tự động SuperHuman",
+    Name = "Aotu SuperHuman",
     Default = false,
     Flag = "Tự động SuperHuman",
     Save = true,
@@ -4210,7 +4210,7 @@ local Section = IQ:AddSection({
 
 
 BartiloToggle = IQ:AddToggle({
-    Name = "Tự động Bartilo Quest",
+    Name = "Aotu Bartilo Quest",
     Default = false,
     Flag = "Tự động Bartilo",
     Save = true,
@@ -4227,7 +4227,7 @@ local Section = IQ:AddSection({
 
 
 IQ:AddToggle({
-    Name = "Tự động Third Sea",
+    Name = "Aotu Third Sea",
     Default = false,
     Flag = "Tự động Third",
     Save = true,
@@ -4238,7 +4238,7 @@ IQ:AddToggle({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Buy Legend Sword",
+    Name = "Aotu Buy Legend Sword",
     Default = false,
     Flag = "Tự động Legend",
     Save = true,
@@ -4252,7 +4252,7 @@ local Section = IQ:AddSection({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Buddy Sword",
+    Name = "Aotu Buddy Sword",
     Default = false,
     Flag = "Tự động Buddy",
     Save = true,
@@ -4263,7 +4263,7 @@ IQ:AddToggle({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Buddy Sword[HOP]",
+    Name = "Aotu Buddy Sword[HOP]",
     Default = false,
     Flag = "Tự động Buddy[HOP]",
     Save = true,
@@ -4277,7 +4277,7 @@ IQ:AddToggle({
     })
 
     IQ:AddToggle({
-        Name = "Tự động Soul Guita",
+        Name = "Aotu Soul Guita",
         Default = false,
         Flag = "Tự động Soul",
         Save = true,
@@ -4288,7 +4288,7 @@ IQ:AddToggle({
     })
 
 IQ:AddToggle({
-    Name = "Tự động Soul Guita[HOP]",
+    Name = "Aotu Soul Guita[HOP]",
     Default = false,
     Flag = "Tự động Soul[HOP]",
     Save = true,
@@ -4298,7 +4298,7 @@ IQ:AddToggle({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Auto Observation V2",
+    Name = "Auto Observation V2",
     Default = false,
     Flag = "Tự động ObservationV2",
     Save = true,
@@ -4309,11 +4309,11 @@ IQ:AddToggle({
 })
 
 local Section = IQ:AddSection({
-    Name = "Tự động Dual Curset Katana[Not Work]"
+    Name = "Aotu Dual Curset Katana[ Bugs ]"
 })
 
 IQ:AddToggle({
-    Name = "Tự động Dual Curset Katana",
+    Name = "Aotu Dual Curset Katana",
     Default = false,
     Flag = "Tự động DualCursetKatana",
     Save = true,
@@ -4328,7 +4328,7 @@ local Section = IQ:AddSection({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Tushita",
+    Name = "Aotu Tushita",
     Default = false,
     Flag = "Tự động Tushita",
     Save = true,
@@ -4340,7 +4340,7 @@ IQ:AddToggle({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Tushita[HOP]",
+    Name = "Aotu Tushita[HOP]",
     Default = false,
     Flag = "Tự động Tushita[HOP]",
     Save = true,
@@ -4354,7 +4354,7 @@ local Section = IQ:AddSection({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Cavander",
+    Name = "Aotu Cavander",
     Default = false,
     Flag = "Tự động Cavander",
     Save = true,
@@ -4365,7 +4365,7 @@ IQ:AddToggle({
 })
 
 IQ:AddToggle({
-    Name = "Tự động Cavander[HOP]",
+    Name = "Aotu Cavander[HOP]",
     Default = false,
     Flag = "Tự động Cavander[HOP]",
     Save = true,
@@ -4379,7 +4379,7 @@ IQ:AddToggle({
         })
 
         IQ:AddToggle({
-            Name = "Tự động Twin Hook",
+            Name = "Aotu Twin Hook",
             Default = false,
             Flag = "Tự động Twin",
             Save = true,
@@ -4398,7 +4398,7 @@ IQ:AddToggle({
         })
 
         IQ:AddToggle({
-            Name = "Tự động Hallow Scythe",
+            Name = "Aotu Hallow Scythe",
             Default = false,
             Flag = "Tự động Hallow",
             Save = true,
@@ -4415,7 +4415,7 @@ IQ:AddToggle({
         })
 
         IQ:AddToggle({
-            Name = "Tự động Dark Dragger",
+            Name = "Aotu Dark Dragger",
             Default = false,
             Flag = "Tự động Dark",
             Save = true,
@@ -4455,7 +4455,7 @@ IQ:AddToggle({
     })
 
     IQ:AddToggle({
-        Name = "Tự động Seabeast",
+        Name = "Kill Seabeast",
         Default = false,
         Flag = "Tự động Seabeast",
         Save = true,
@@ -4483,7 +4483,7 @@ local Section = IQ:AddSection({
     })
 
 IQ:AddToggle({
-    Name = "Tự động treo đảo bí ẩn",
+    Name = "Aotu Summon Mirrage Inland",
     Default = false,
     Flag = "Tự động Mirrage",
     Save = true,
@@ -4557,7 +4557,7 @@ IQ:AddToggle({
 }) 
     
 IQ:AddToggle({
-    Name = "Tìm đảo bí ẩn",
+    Name = "Tele Mirrage Inland",
     Default = false,
     Flag = "Tự động Mirrage2",
     Save = true,
@@ -4657,7 +4657,7 @@ local Fruit = S:AddLabel("Fruit : ")
     end)
 
 S:AddToggle({
-    Name = "Tự động Nâng",
+    Name = "Stats Kaitun",
     Default = false,
     Flag = "Tự động Kaitun",
     Save = true,
@@ -4677,7 +4677,7 @@ S:AddToggle({
 })
 
 S:AddToggle({
-    Name = "Máu",
+    Name = "Defense",
     Default = false,
     Flag = "Tự động Defense",
     Save = true,
@@ -4687,7 +4687,7 @@ S:AddToggle({
 })
 
 S:AddToggle({
-    Name = "Kiếm",
+    Name = "Sword",
     Default = false,
     Flag = "Tự động Sword",
     Save = true,
@@ -4697,7 +4697,7 @@ S:AddToggle({
 })
 
 S:AddToggle({
-    Name = "Súng",
+    Name = "Gun",
     Default = false,
     Flag = "Tự động Gun",
     Save = true,
@@ -4718,14 +4718,14 @@ S:AddToggle({
 
 PointStats = 1
 S:AddSlider({
-    Name = "Điểm",
+    Name = "Stats",
     Min = 1,
     Max = 2450,
     Default = 1,
     Color = Color3.fromRGB(255,255,255),
     Increment = 1,
     ValueName = "Point",
-    Flag = "Tự động Point",
+    Flag = "Aotu Point",
     Save = true,
     Callback = function(Value)
         PointStats = Value
@@ -4737,7 +4737,7 @@ local Section = E:AddSection({
 })
 
 E:AddToggle({
-    Name = "ESP Ng Chơi",
+    Name = "ESP Player",
     Default = false,
     Flag = "ESP Players",
     Save = true,
@@ -4793,7 +4793,7 @@ function UpdatePlayerChams()
 end
 
 E:AddToggle({
-    Name = "ESP Trái Ác Quỷ",
+    Name = "ESP Fruits",
     Default = false,
     Flag = "ESP Fruits",
     Save = true,
@@ -4860,7 +4860,7 @@ spawn(function()
 end)
 
 E:AddToggle({
-    Name = "ESP Đảo",
+    Name = "ESP Inland",
     Default = false,
     Flag = "ESP Island",
     Save = true,
@@ -4906,7 +4906,7 @@ function UpdateIslandESP()
 end
 
 E:AddToggle({
-    Name = "ESP Hoa",
+    Name = "ESP Flower",
     Default = false,
     Flag = "ESP Flower",
     Save = true,
@@ -4973,7 +4973,7 @@ _G.SelectChip = selectraids or ""
 
 
     RA:AddDropdown({
-        Name = "Chọn Chips",
+        Name = "Select Chips",
         Default = "",
         Options = Raidslist,
         Flag = "Select Chips",
@@ -4986,21 +4986,21 @@ _G.SelectChip = selectraids or ""
 
 
 RA:AddButton({
-    Name = "Mua Chip",
+    Name = "Buy Chip",
     Callback = function()
           _G.AutoBuyChip = value
       end    
 })
 
 RA:AddButton({
-    Name = "Mua Chips",
+    Name = "Buy Chips",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("RaidsNpc","Select",_G.SelectChip)
       end    
 })
 
 RA:AddToggle({
-    Name = "Tự động Vào Raid",
+    Name = "Aotu Start Raid",
     Default = false,
     Flag = "Tự động Start",
     Save = true,
@@ -5015,7 +5015,7 @@ local Section = RA:AddSection({
 })
 
 RA:AddToggle({
-    Name = "Kill Quái",
+    Name = "Kill Aura",
     Default = false,
     Flag = "Tự động KillAura",
     Save = true,
@@ -5025,7 +5025,7 @@ RA:AddToggle({
 })
 
     RA:AddToggle({
-        Name = "Qua đảo",
+        Name = "Nextlsland",
         Default = false,
         Flag = "Tự động NextIsland",
         Save = true,
@@ -5036,7 +5036,7 @@ RA:AddToggle({
     })
 
 RA:AddToggle({
-    Name = "Tự động skill v2",
+    Name = "Aotu Awakener",
     Default = false,
     Flag = "Tự động Awakener",
     Save = true,
