@@ -3884,7 +3884,7 @@ ToggleSeaBeAst:OnChanged(function(Value)
     end)
     
     
-    elseif Third_Sea then
+    
      Tabs.Main:AddParagraph({
         Title = "Elite Hunter",
         Content = "Auto find and kill boss elite"
@@ -3961,7 +3961,7 @@ ToggleSeaBeAst:OnChanged(function(Value)
     end
 
 
-elseif Third_Sea then
+
  Tabs.Main:AddParagraph({
     Title = "Mirage Island",
     Content = "Auto Summon Mystic Island"
