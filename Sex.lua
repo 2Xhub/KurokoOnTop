@@ -2484,7 +2484,7 @@ spawn(function()
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Kuroko HUB | Blox Fruits By ĐạtBot Mods", HidePremium = false, IntroText = "KurokoHubX Library", SaveConfig = true, ConfigFolder = "Min Gaming Hub"})
+local Window = OrionLib:MakeWindow({Name = "Kuroko HUB | Blox Fruits By ĐạtBot Mods", HidePremium = false, IntroText = "KurokoHub Library", SaveConfig = true, ConfigFolder = "Min Gaming Hub"})
 ----------Tab-----------------------
 local W = Window:MakeTab({
     Name = "Notification",
@@ -2664,14 +2664,14 @@ local locallv = W:AddLabel("Level")
         Name = "Status Hack"
     })
     
-    local Farmfast = W:AddLabel("Farm Fast : ❌")
-    local Bypass = W:AddLabel("Bypass ❌")
+    local Farmfast = W:AddLabel("Farm Fast : ✅")
+    local Bypass = W:AddLabel("Bypass ✅")
     local Section = W:AddSection({
         Name = "World"
     })
-    local WolrdSet3 = W:AddLabel("World 1 ❌ ")
-    local WolrdSet = W:AddLabel("Wolrd : 2 ❌")
-    local WolrdSet1 = W:AddLabel("Wolrd : 3 ❌")
+    local WolrdSet3 = W:AddLabel("World 1 ✅ ")
+    local WolrdSet = W:AddLabel("Wolrd : 2 ✅")
+    local WolrdSet1 = W:AddLabel("Wolrd : 3 ✅")
     local Section = W:AddSection({
         Name = "Stats Point"
     })
@@ -4449,34 +4449,7 @@ IQ:AddToggle({
             end
         end)
     end
-
-    local Section = IQ:AddSection({
-        Name = "SeaBeast"
-    })
-
-    IQ:AddToggle({
-        Name = "Kill Seabeast",
-        Default = false,
-        Flag = "Tự động Seabeast",
-        Save = true,
-        Callback = function(Value)
-            _G.AutoSeaBest = Value
-            StopTween(_G.AutoSeaBest)
-        end    
-    })
-
-
-
-spawn(function()
-    pcall(function()
-        while wait() do
-            if _G.Hop == true then
-                Hop()
-            elseif _G.Hop == false then
-            end
-        end
-    end)
-end)
+end
 
 local Section = IQ:AddSection({
         Name = "Mirrage Menu"
@@ -5050,7 +5023,7 @@ local Section = RA:AddSection({
 })
 
 RA:AddToggle({
-    Name = "Tự động Mua Chips Law[Raid]",
+    Name = "Aotu BuyChips Law[Raid]",
     Default = false,
     Flag = "Tự động Chips Law",
     Save = true,
@@ -5470,7 +5443,7 @@ local Section = LC:AddSection({
 })
 
 LC:AddButton({
-    Name = "Xóa xương mù",
+    Name = "Remove",
     Callback = function()
         game:GetService("Lighting").LightingLayers:Destroy()
         game:GetService("Lighting").Sky:Destroy()
@@ -5695,7 +5668,7 @@ spawn(function()
             elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86 then
                 MobKilled:Set("Defeat : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39))
             else
-                MobKilled:Set("Dough King V1 : ✅")
+                MobKilled:Set("Cake Prince : ✅")
             end
         end)
     end
