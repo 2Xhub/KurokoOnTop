@@ -3382,7 +3382,7 @@ PosY = 30
 M:AddSlider({
     Name = "Distance",
     Min = 0,
-    Max = 65,
+    Max = 35,
     Default = PosY,
     Color = Color3.fromRGB(255,255,255),
     Increment = 1,
@@ -3956,7 +3956,7 @@ ST:AddToggle({
 })
 local Bring = {"Low", "Normal", "Super Bring"}
 _G.BringMode = "Normal"
-M:AddDropdown({
+ST:AddDropdown({
     Name = "Bring Mode",
     Default = "Normal",
     Options = Bring,
@@ -5062,13 +5062,13 @@ RA:AddToggle({
     end    
 })
 
-local Section = LC:AddSection({
+local Section = Wld:AddSection({
     Name = "Teleport Island"
 })
 
 
 if World1 then
-LC:AddDropdown({
+Wld:AddDropdown({
     Name = "Select Island",
     Default = "",
     Options = {"WindMill",
@@ -5098,7 +5098,7 @@ LC:AddDropdown({
 end
 
 if World2 then
-LC:AddDropdown({
+Wld:AddDropdown({
     Name = "Select Island",
     Default = "",
     Options = {"The Cafe",
@@ -5126,7 +5126,7 @@ LC:AddDropdown({
 end
 
 if World3 then
-LC:AddDropdown({
+Wld:AddDropdown({
     Name = "Select Island",
     Default = "",
     Options = {"Mansion",
@@ -5151,7 +5151,7 @@ LC:AddDropdown({
 })
 end
 
-LC:AddToggle({
+Wld:AddToggle({
     Name = "Tele Inland",
     Default = false,
     Callback = function(Value)
@@ -5264,7 +5264,7 @@ LC:AddToggle({
     end    
 })
 
-local Section = LC:AddSection({
+local Section = Wld:AddSection({
     Name = "Teleport NPC"
 })
 
@@ -5317,7 +5317,7 @@ NPC3 = {
 }
 
 if World1 then
-LC:AddDropdown({
+Wld:AddDropdown({
 	Name = "Select NPC",
 	Default = "",
 	Options = NPC1,
@@ -5329,7 +5329,7 @@ LC:AddDropdown({
 })
 end
 if World2 then
-    LC:AddDropdown({
+    Wld:AddDropdown({
         Name = "Select NPC",
         Default = "",
         Options = NPC2,
@@ -5341,7 +5341,7 @@ if World2 then
     })
 end
     if World3 then
-        LC:AddDropdown({
+        Wld:AddDropdown({
             Name = "Select NPC",
             Default = "",
             Options = NPC3,
@@ -5353,7 +5353,7 @@ end
         })
     end
 
-        LC:AddToggle({
+        Wld:AddToggle({
             Name = "Tele NPC",
             Default = false,
             Callback = function(Value)
