@@ -4478,7 +4478,6 @@ spawn(function()
     end)
 end)
 
-
 local Section = IQ:AddSection({
         Name = "Mirrage Menu"
     })
