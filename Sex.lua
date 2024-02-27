@@ -2484,7 +2484,7 @@ spawn(function()
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Kuroko HUB X | Blox Fruits Version 1.1", HidePremium = false, IntroText = "KurokoHubX Library", SaveConfig = true, ConfigFolder = "Min Gaming Hub"})
+local Window = OrionLib:MakeWindow({Name = "Kuroko HUB | Blox Fruits By ĐạtBot Mods", HidePremium = false, IntroText = "KurokoHubX Library", SaveConfig = true, ConfigFolder = "Min Gaming Hub"})
 ----------Tab-----------------------
 local W = Window:MakeTab({
     Name = "Notification",
@@ -2920,7 +2920,7 @@ end
     
     
     M:AddButton({
-        Name = "nhập hết code",
+        Name = "Aotu Redeem Code",
         Callback = function()
             function RedeemCode(value)
                 game:GetService("ReplicatedStorage").Remotes.Redeem:InvokeServer(value)
@@ -3675,7 +3675,7 @@ local Bone = M:AddLabel("Bone : ")
 spawn(function()
     while wait() do
         pcall(function()
-            Bone:Set("Còn : "..(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Check")))
+            Bone:Set("Mobs : "..(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Bones","Check")))
         end)
     end
 end)
@@ -3737,7 +3737,7 @@ local EliteProgress = M:AddLabel("")
 
 
     M:AddToggle({
-        Name = "Đánh Nhà Máy",
+        Name = "Farm Factory",
         Default = false,
         Flag = "Tự động Factory",
         Save = true,
@@ -3748,7 +3748,7 @@ local EliteProgress = M:AddLabel("")
     })
 
         M:AddToggle({
-            Name = "Đánh hải Tặc",
+            Name = "Farm Castle",
             Default = false,
             Flag = "Tự động Castle",
             Save = true,
@@ -3763,7 +3763,7 @@ local EliteProgress = M:AddLabel("")
         
 
         M:AddToggle({
-            Name = "Farm Katakuri",
+            Name = "Farm Cake Prince",
             Default = false,
             Flag = "Tự động Katakuri",
             Save = true,
@@ -3774,7 +3774,7 @@ local EliteProgress = M:AddLabel("")
         })    
         
         M:AddToggle({
-            Name = "Spam Katakuri",
+            Name = "Spawn Cake Prince",
             Default = true,
             Callback = function(Value)
                 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner",Value)
@@ -3782,7 +3782,7 @@ local EliteProgress = M:AddLabel("")
         })
         
         M:AddToggle({
-            Name = "Farm Katakuri v2",
+            Name = "Farm Dough King",
             Default = false,
             Flag = "Tự động Katakuri v2",
             Save = true,
