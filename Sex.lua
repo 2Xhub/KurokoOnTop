@@ -3462,7 +3462,7 @@ spawn(function()
     end)
 end)
 
-    _G.FastAttackDelay = 0.15
+    _G.FastAttackDelay = 0.001
            
 local Section = M:AddSection({
     Name = "Bypass Teleport"
@@ -4716,11 +4716,11 @@ S:AddToggle({
     end    
 })
 
-PointStats = 1
+PointStats = 100
 S:AddSlider({
     Name = "Stats",
     Min = 1,
-    Max = 2450,
+    Max = 2550,
     Default = 1,
     Color = Color3.fromRGB(255,255,255),
     Increment = 1,
