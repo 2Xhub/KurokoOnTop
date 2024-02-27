@@ -3329,7 +3329,7 @@ M:AddToggle({
     })
 
     M:AddToggle({
-        Name = "Skill! X",
+        Name = "Skill X",
         Default = false,
         Default = false,
         Flag = "Skill X",
@@ -3378,11 +3378,11 @@ M:AddToggle({
     Name = "Distance Mobs"
 })
 
-PosY = 30
+PosY = 20
 M:AddSlider({
     Name = "Distance",
     Min = 0,
-    Max = 35,
+    Max = 25,
     Default = PosY,
     Color = Color3.fromRGB(255,255,255),
     Increment = 1,
