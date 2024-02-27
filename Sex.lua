@@ -3375,48 +3375,6 @@ M:AddToggle({
     })
 
     local Section = M:AddSection({
-        Name = "Bring Mob"
-    })
-
-M:AddToggle({
-    Name = "Bring Mobs",
-    Default = true,
-    Flag = "Bring Mobs",
-    Save = false,
-    Callback = function(Value)
-        _G.BringMonster = Value
-    end    
-})
-local Bring = {"Low", "Normal", "Super Bring"}
-_G.BringMode = "Normal"
-M:AddDropdown({
-    Name = "Bring Mode",
-    Default = "Normal",
-    Options = Bring,
-    Default = false,
-    Flag = "Bring Mode",
-    Save = true,
-    Callback = function(Value)
-        _G.BringMode = Value
-    end    
-})
-spawn(function()
-    while wait(.1) do
-        if _G.BringMode then
-            pcall(function()
-                if _G.BringMode == "Low" then
-                    _G.BringMode = 300
-                elseif _G.BringMode == "Normal" then
-                    _G.BringMode = 375
-                elseif _G.BringMode == "Super Bring" then
-                    _G.BringMode = 450
-                end
-            end)
-        end
-    end
-end)
-
-local Section = M:AddSection({
     Name = "Distance Mobs"
 })
 
@@ -3941,7 +3899,7 @@ end)
         end    
     })
         
-    M:AddToggle({
+    ST:AddToggle({
     Name = "Fast Attack",
     Default = true,
     Flag = "FastAttack",
@@ -3983,9 +3941,47 @@ spawn(function()
     end)
 end)
 
-    _G.FastAttackDelay = 0.10
+    _G.FastAttackDelay = 0.75
            
 
+
+ST:AddToggle({
+    Name = "Bring Mobs",
+    Default = true,
+    Flag = "Bring Mobs",
+    Save = false,
+    Callback = function(Value)
+        _G.BringMonster = Value
+    end    
+})
+local Bring = {"Low", "Normal", "Super Bring"}
+_G.BringMode = "Normal"
+M:AddDropdown({
+    Name = "Bring Mode",
+    Default = "Normal",
+    Options = Bring,
+    Default = false,
+    Flag = "Bring Mode",
+    Save = true,
+    Callback = function(Value)
+        _G.BringMode = Value
+    end    
+})
+spawn(function()
+    while wait(.1) do
+        if _G.BringMode then
+            pcall(function()
+                if _G.BringMode == "Low" then
+                    _G.BringMode = 300
+                elseif _G.BringMode == "Normal" then
+                    _G.BringMode = 375
+                elseif _G.BringMode == "Super Bring" then
+                    _G.BringMode = 450
+                end
+            end)
+        end
+    end
+end)
 
 ST:AddToggle({
         Name = "Aotu Buso",
@@ -4069,7 +4065,7 @@ ST:AddToggle({
     Name = "Bypass Tp [ Bugs ] Fix Soon...",
     Default = false,
     Flag = "Bypass TP",
-    Save = true,
+    Save = false,
     Callback = function(Value)
         BypassTP = true 
     end    
