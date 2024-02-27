@@ -3304,7 +3304,7 @@ M:AddToggle({
 })
 
     M:AddSlider({
-        Name = "Máu",
+        Name = "Health",
         Min = 0,
         Max = 100,
         Default = 25,
@@ -3470,7 +3470,7 @@ local Section = M:AddSection({
 
 M:AddToggle({
     Name = "Bypass Tp",
-    Default = false,
+    Default = true,
     Flag = "Bypass TP",
     Save = true,
     Callback = function(Value)
@@ -5060,7 +5060,7 @@ RA:AddToggle({
 })
 
 RA:AddToggle({
-    Name = "Vào raid law",
+    Name = "Start Raid Law",
     Default = false,
     Flag = "Tự động Start Raid Law",
     Save = true,
@@ -5070,7 +5070,7 @@ RA:AddToggle({
 })
 
 RA:AddToggle({
-    Name = "Tự động Kill Law",
+    Name = "Farm Law",
     Default = false,
     Flag = "Tự động Kill Law",
     Save = true,
@@ -5170,7 +5170,7 @@ LC:AddDropdown({
 end
 
 LC:AddToggle({
-    Name = "Tele đến đảo",
+    Name = "Tele Inland",
     Default = false,
     Callback = function(Value)
         _G.TeleportIsland = Value
@@ -5336,7 +5336,7 @@ NPC3 = {
 
 if World1 then
 LC:AddDropdown({
-	Name = "Chọn NPC",
+	Name = "Select NPC",
 	Default = "",
 	Options = NPC1,
     Flag = "Select NPC",
@@ -5360,7 +5360,7 @@ if World2 then
 end
     if World3 then
         LC:AddDropdown({
-            Name = "Chọn NPC",
+            Name = "Select NPC",
             Default = "",
             Options = NPC3,
             Flag = "Select NPC",
@@ -5372,7 +5372,7 @@ end
     end
 
         LC:AddToggle({
-            Name = "Tele Đến NPC",
+            Name = "Tele NPC",
             Default = false,
             Callback = function(Value)
                 _G.TeleportNPC = Value
@@ -5478,7 +5478,7 @@ LC:AddButton({
 })
 
 LC:AddToggle({
-    Name = "Tele đến đảo bí ẩn",
+    Name = "Teleport to Mirage",
     Default = false,
     Flag = "Teleport to Mirage",
     Save = true,
@@ -5515,7 +5515,7 @@ Playerslist = {}
     end
     
 local SelectedPly = LC:AddDropdown({
-    Name = "Chọn ngchơi",
+    Name = "Select Player",
     Default = "",
     Options = Playerslist,
     Callback = function(Value)
@@ -5524,7 +5524,7 @@ local SelectedPly = LC:AddDropdown({
 })
 
 LC:AddButton({
-    Name = "Làm mới",
+    Name = "Rest Select",
     Callback = function()
         NewPlayerList = {}
     for i,v in pairs(game.Players:GetChildren()) do  
@@ -5535,7 +5535,7 @@ LC:AddButton({
 })
 
 LC:AddToggle({
-    Name = "Tele đến người chơi",
+    Name = "Tele to Player",
     Default = false,
     Callback = function(Value)
         _G.TeleportPly = Value
@@ -5550,7 +5550,7 @@ LC:AddToggle({
 
 
 LC:AddToggle({
-    Name = "Tự động kill người chơi",
+    Name = "Aotu Kill Player",
     Default = false,
     Callback = function(Value)
         _G.Auto_Kill_Ply = Value
@@ -5563,7 +5563,7 @@ local Section = LC:AddSection({
 })
 
 LC:AddToggle({
-    Name = "Ngắm chiêu",
+    Name = "Ambot",
     Default = false,
     Callback = function(Value)
         _G.Aimbot_Gun = Value
@@ -5575,7 +5575,7 @@ LC:AddToggle({
 
 
 LC:AddToggle({
-    Name = "Ngắm chiêu người chơi gần",
+    Name = "Ambot Skill Nearest",
     Default = false,
     Flag = "Aimbot Skill Nearest",
     Save = true,
@@ -5706,7 +5706,7 @@ local Section = SV:AddSection({
 })
 
 SV:AddToggle({
-	Name = "Tìm trăng tròn",
+	Name = "Full Moom",
 	Default = false,
     Flag = "FindFM",
     Save = true,
@@ -5716,7 +5716,7 @@ SV:AddToggle({
 })
 
 SV:AddToggle({
-	Name = "Tìm đảo bí ẩn",
+	Name = "Tele Mirrage Island",
 	Default = false,
     Flag = "FindMrg",
     Save = true,
@@ -5731,7 +5731,7 @@ local Section = SV:AddSection({
 })
 
         SV:AddTextbox({
-            Name = "Dán id máy chủ cần vào",
+            Name = "...",
             Default = "",
             TextDisappear = true,
             Callback = function(Value)
@@ -5740,7 +5740,7 @@ local Section = SV:AddSection({
         })
 
         SV:AddButton({
-            Name = "vào máy chủ đã dán id",
+            Name = "Id Sever",
             Callback = function()
                 _G.AutoRejoin = false
                 game:GetService("TeleportService"):TeleportToPlaceInstance(game.placeId,_G.Job, game.Players.LocalPlayer)
@@ -5748,14 +5748,14 @@ local Section = SV:AddSection({
         })
 
         SV:AddButton({
-            Name = "Sao chép job id",
+            Name = "Save Job Id",
             Callback = function()
                 setclipboard(tostring(game.JobId))
               end    
             })
 
         SV:AddButton({
-            Name = "Chuyển sv",
+            Name = "Hop Sever",
             Callback = function()
                 _G.AutoRejoin = false
                 Hop()
@@ -5763,14 +5763,14 @@ local Section = SV:AddSection({
         })
 
         SV:AddButton({
-            Name = "Vào lại sv",
+            Name = "Rejoin Sever",
             Callback = function()
                 game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
               end    
         })
 
         SV:AddButton({
-            Name = "chuyển sv ít người",
+            Name = "Hop Sever Low",
             Callback = function()
                 _G.AutoRejoin = false
                 getgenv().AutoTeleport = true
@@ -5821,14 +5821,14 @@ local Section = SV:AddSection({
         })
 
 D:AddButton({
-    Name = "Đổi Fruits",
+    Name = "Random Fruits",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Cousin","Buy")
       end    
 })
 
 D:AddToggle({
-    Name = "Tự động Đổi Fruits",
+    Name = "Aotu Random Fruits",
     Default = false,
     Flag = "Tự động Random Fruits",
     Save = true,
@@ -5886,7 +5886,7 @@ FruitList = {
 }
 
 D:AddToggle({
-    Name = "Tự động Cất Fruits",
+    Name = "Aotu Store Fruits",
     Default = false,
     Flag = "Tự động Store Fruits",
     Save = true,
@@ -5925,7 +5925,7 @@ function DropFruit()
     end)
 end
 D:AddToggle({
-    Name = "Tele đến Fruit",
+    Name = "Tween to Fruits Spawn",
     Default = false,
     Flag = "Teleport To Fruit Spawn",
     Save = true,
@@ -5947,7 +5947,7 @@ spawn(function()
 end)
 
 D:AddToggle({
-    Name = "Tự động thả Fruit",
+    Name = "Aotu Drop Fruit",
     Default = false,
     Flag = "Tự động Drop Fruit",
     Save = true,
@@ -5987,7 +5987,7 @@ spawn(function()
 end)
 
 D:AddToggle({
-    Name = "Nhặt hết fruit (dễ kick)",
+    Name = "Bring Fruits (Rick Kick)",
     Default = false,
     Flag = "Bring All Fruit[75% Kick]",
     Save = true,
@@ -6014,7 +6014,7 @@ local Section = R:AddSection({
 })
 
 AutoPullLever = R:AddToggle({
-    Name = "Tự động gạt cần",
+    Name = "Aotu Pull Lever",
     Default = false,
     Flag = "Tự động Pull Lever",
     Save = true,
@@ -6025,7 +6025,7 @@ AutoPullLever = R:AddToggle({
 })
 
 R:AddToggle({
-    Name = "Tự động tộc v3",
+    Name = "Aotu Turn On V3",
     Default = false,
     Flag = "Tự động Turn On Race v3",
     Save = true,
@@ -6045,8 +6045,8 @@ spawn(function()
     end
 end)
 R:AddToggle({
-    Name = "Tự động tộc v4",
-    Default = false,
+    Name = "Aotu Turn On V4",
+    Default = true,
     Flag = "Tự động Turn On Race v4",
     Save = true,
     Callback = function(Value)
@@ -6066,7 +6066,7 @@ spawn(function()
 end)
 
 MoveCamTooMoonToggle = R:AddToggle({
-    Name = "Nhìn trăng",
+    Name = "Lock Moon",
     Default = false,
     Flag = "Move Cam to Moon",
     Save = true,
@@ -6087,7 +6087,7 @@ spawn(function()
 end)
 
 R:AddButton({
-    Name = "Tele đến Gear",
+    Name = "Tween to Gear",
     Callback = function()
         _G.TweenMGear = Value
         StopTween(_G.TweenMGear)	
@@ -6099,7 +6099,7 @@ local Section = R:AddSection({
 })
 
 R:AddToggle({
-    Name = "Tự động Mua Gear",
+    Name = "Aotu Buy Gear",
     Default = false,
     Flag = "Tự động Buy Gear",
     Save = true,
@@ -6128,7 +6128,7 @@ end)
 end)
 
 R:AddToggle({
-    Name = "Tự động cày tộc mua gear",
+    Name = "Aotu Train Quets",
     Default = false,
     Flag = "Tự động Train Race",
     Save = true,
@@ -6146,21 +6146,21 @@ local Section = R:AddSection({
 
 
 R:AddButton({
-    Name = "Tele Đến Đền",
+    Name = "Tween Temple Of Time",
     Callback = function()
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
       end    
 })
 
 R:AddButton({
-    Name = "Tele đến cần gạt",
+    Name = "Tween Pull Lever",
     Callback = function()
         PullLever()
       end    
 })
 
 R:AddButton({
-    Name = "Tele Đến Ancient One",
+    Name = "Tween to Ancient One",
     Callback = function()
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
@@ -6170,7 +6170,7 @@ R:AddButton({
 })
 
 R:AddButton({
-    Name = "Tele đến Clock",
+    Name = "Tween to Clock",
     Callback = function()
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
@@ -6180,7 +6180,7 @@ R:AddButton({
 })
 
 R:AddButton({
-    Name = "Tele đến tộc của bạn",
+    Name = "Tween Door",
     Callback = function()
         Game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(28286.35546875, 14895.3017578125, 102.62469482421875)
   wait(.1)
@@ -6224,7 +6224,7 @@ local Section = R:AddSection({
 })
 
 R:AddToggle({
-    Name = "Tự động hoàn thành ải",
+    Name = "Aotu Trials",
     Default = false,
     Flag = "Tự động Complete Trials",
     Save = true,
@@ -6235,7 +6235,7 @@ R:AddToggle({
 })
 
 R:AddToggle({
-    Name = "Tự động kill người chơi",
+    Name = "Aotu Kill Player [ 70% Will ]",
     Default = false,
     Flag = "KillTrials",
     Save = true,
@@ -6328,28 +6328,28 @@ local Section = SH:AddSection({
 })
 
 SH:AddButton({
-    Name = "Mua haki vũ trang",
+    Name = "Buy Buso",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Buso")
       end    
 })
 
 SH:AddButton({
-    Name = "Mua nhảy liên tục",
+    Name = "Buy Geppo",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Geppo")
       end    
 })
 
 SH:AddButton({
-    Name = "Mua Soru",
+    Name = "Buy Soru",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyHaki","Soru")
       end    
 })
 
 SH:AddButton({
-    Name = "Mua haki quan sát",
+    Name = "Buy Ken",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("KenTalk","Buy")
       end    
@@ -6362,7 +6362,7 @@ local Section = SH:AddSection({
 })
 
 SH:AddButton({
-    Name = "Mua tộc quỷ :",
+    Name = "Buy Ghoul :",
     Callback = function()
         local a = {
             [1] = "Ectoplasm",
@@ -6380,7 +6380,7 @@ SH:AddButton({
 })
 
 SH:AddButton({
-    Name = "Mua tộc robot :",
+    Name = "Buy Cyborg :",
     Callback = function()
         local a = {
             [1] = "CyborgTrainer",
@@ -6539,7 +6539,7 @@ SH:AddButton({
 })
 
 SH:AddButton({
-    Name = "Hoàn trả điểm",
+    Name = "Rest Stats",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","1")
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Refund","2")
@@ -6547,7 +6547,7 @@ SH:AddButton({
 })
 
 SH:AddButton({
-    Name = "Đổi tộc",
+    Name = "Random Race",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","1")
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BlackbeardReward","Reroll","2")
@@ -6559,7 +6559,7 @@ local Section = C:AddSection({
 })
 
 C:AddButton({
-    Name = "Cửa hàng trái",
+    Name = "Shop Fruits",
     Callback = function()
         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("GetFruits")
         game:GetService("Players").LocalPlayer.PlayerGui.Main.FruitShop.Visible = true	
@@ -6590,7 +6590,7 @@ C:AddButton({
 })
 
 C:AddToggle({
-    Name = "Mua Haki Màu",
+    Name = "Buy Color Haki",
     Default = false,
     Callback = function(Value)
         _G.AutoBuyEnchancementColour = Value
@@ -6619,17 +6619,17 @@ local Section = C:AddSection({
 C:AddToggle({
 	Name = "Lock Level",
 	Default = false,
-    Flag = "Khóa Level",
+    Flag = "Lock Level",
     Save = true,
 	Callback = function(Value)
 		LockLevel = Value
 	end    
 })
 
-LockLevelValue = 2450
+LockLevelValue = 2550
 OldLevel = game.Players.localPlayer.Data.Level.Value
 C:AddSlider({
-	Name = "Khóa Level",
+	Name = "Lock Level",
 	Min = 1,
 	Max = 2550,
 	Default = 2550,
@@ -6672,8 +6672,8 @@ spawn(function()
     })
 
 C:AddToggle({
-    Name = "Tự động vào lại",
-    Default = false,
+    Name = "Aotu Rejoin",
+    Default = true,
     Callback = function(Value)
         _G.AutoRejoin = Value
     end    
@@ -6718,7 +6718,7 @@ spawn(function()
     })
 
     C:AddToggle({
-        Name = "Vô hạn Soru",
+        Name = "Infinity Soru",
         Default = false,
         Callback = function(Value)
             getgenv().InfSoru = Value
@@ -6747,7 +6747,7 @@ spawn(function()
     end)
 
     C:AddToggle({
-        Name = "xuyên tường",
+        Name = "No Click",
         Default = false,
         Callback = function(Value)
             _G.NOCLIP = Value
@@ -6767,7 +6767,7 @@ spawn(function()
 
 
 C:AddButton({
-    Name = "XóaLava",
+    Name = "Remove Lava",
     Callback = function()
         for i,v in pairs(game.Workspace:GetDescendants()) do
             if v.Name == "Lava" then   
