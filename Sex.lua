@@ -2575,6 +2575,8 @@ local Section = W:AddSection({
     Name = "Status"
 })
 
+local localDicord = W:AddLabel("Dicord Kuroko Hub : Soon...")
+
 local locallv = W:AddLabel("Level")
     
     spawn(function()
@@ -2658,9 +2660,7 @@ local locallv = W:AddLabel("Level")
                 end
             end)
         end
-    end)
-    
-    local localDicord = W:AddLabel("Dicord Kuroko Hub : Soon...")
+    end)        
     
     local Section = W:AddSection({
         Name = "Status Hack"
