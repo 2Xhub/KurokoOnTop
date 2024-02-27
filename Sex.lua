@@ -2484,7 +2484,7 @@ spawn(function()
 end)
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Kuroko HUB | Blox Fruits By ĐạtBot Mods", HidePremium = false, IntroText = "KurokoHub Library", SaveConfig = true, ConfigFolder = "Min Gaming Hub"})
+local Window = OrionLib:MakeWindow({Name = "Kuroko HUB | Blox Fruit", HidePremium = false, IntroText = "KurokoHub Library", SaveConfig = false, ConfigFolder = "Min Gaming Hub"})
 ----------Tab-----------------------
 local W = Window:MakeTab({
     Name = "Notification",
@@ -2659,12 +2659,14 @@ local locallv = W:AddLabel("Level")
             end)
         end
     end)
-
+    
+    local localDicord = W:AddLabel("Dicord Kuroko Hub : Soon...")
+    
     local Section = W:AddSection({
         Name = "Status Hack"
     })
     
-    local Farmfast = W:AddLabel("Farm Fast : ✅")
+    local Farmfast = W:AddLabel("Farm Fast ✅")
     local Bypass = W:AddLabel("Bypass ✅")
     local Section = W:AddSection({
         Name = "World"
