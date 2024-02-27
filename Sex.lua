@@ -3462,21 +3462,8 @@ spawn(function()
     end)
 end)
 
-    _G.FastAttackDelay = 0.001
+    _G.FastAttackDelay = 0.25
            
-local Section = M:AddSection({
-    Name = "Bypass Teleport"
-})
-
-M:AddToggle({
-    Name = "Bypass Tp",
-    Default = true,
-    Flag = "Bypass TP",
-    Save = true,
-    Callback = function(Value)
-        BypassTP = true 
-    end    
-})
 
 
 local Section = M:AddSection({
@@ -4081,6 +4068,20 @@ elseif _G.WhiteScreen == false then
             CheckAntiCheatBypass()
         end    
     })
+
+local Section = M:AddSection({
+    Name = "Bypass Teleport"
+})
+
+M:AddToggle({
+    Name = "Bypass Tp [ Bugs ] Fix Soon...",
+    Default = false,
+    Flag = "Bypass TP",
+    Save = true,
+    Callback = function(Value)
+        BypassTP = true 
+    end    
+})
 
 local Section = IQ:AddSection({
     Name = "Saber Menu"
