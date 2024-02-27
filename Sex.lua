@@ -4449,7 +4449,35 @@ IQ:AddToggle({
             end
         end)
     end
-end
+    
+    local Section = IQ:AddSection({
+        Name = "SeaBeast"
+    })
+
+    IQ:AddToggle({
+        Name = "Kill Seabeast",
+        Default = false,
+        Flag = "Tự động Seabeast",
+        Save = true,
+        Callback = function(Value)
+            _G.AutoSeaBest = Value
+            StopTween(_G.AutoSeaBest)
+        end    
+    })
+
+
+
+spawn(function()
+    pcall(function()
+        while wait() do
+            if _G.Hop == true then
+                Hop()
+            elseif _G.Hop == false then
+            end
+        end
+    end)
+end)
+
 
 local Section = IQ:AddSection({
         Name = "Mirrage Menu"
