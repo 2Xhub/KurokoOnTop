@@ -4069,11 +4069,11 @@ elseif _G.WhiteScreen == false then
         end    
     })
 
-local Section = M:AddSection({
+local Section = ST:AddSection({
     Name = "Bypass Teleport"
 })
 
-M:AddToggle({
+ST:AddToggle({
     Name = "Bypass Tp [ Bugs ] Fix Soon...",
     Default = false,
     Flag = "Bypass TP",
@@ -4985,13 +4985,6 @@ _G.SelectChip = selectraids or ""
     })
 
 
-
-RA:AddButton({
-    Name = "Buy Chip",
-    Callback = function()
-          _G.AutoBuyChip = value
-      end    
-})
 
 RA:AddButton({
     Name = "Buy Chips",
