@@ -2576,11 +2576,6 @@ local Section = W:AddSection({
 })
 
 local localDicord = W:AddLabel("Dicord Kuroko Hub : https://discord.com/invite/x6MfX67F")
-
-                end
-            end
-        end)
-    end
 end)
 
 local Section = M:AddSection({
